@@ -106,52 +106,69 @@ main {
 
             .colunaInformacao {
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-rows: repeat(5, 1fr);
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
                 gap: 0px 0px;
                 grid-auto-flow: row;
                 grid-template-areas:
-                    '. . . area1 .'
-                    '. . . . area2'
-                    '. . . . area3'
-                    '. . . area4 .'
-                    '. . area5 . .';
+                    '. area1 area2'
+                    '. . area3'
+                    '. area4 .';
+                // '. . area4';
+                // '. . area5 . .';
 
                 .experienciaProfissional {
                     grid-area: area1;
                     display: flex;
                     background-color: $brand-primary-200;
                     border-radius: 50%;
-                    width: 100px;
-                    height: 100px;
+                    width: 130px;
+                    height: 130px;
                     justify-content: center;
                     align-items: center;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     margin-top: 28px;
-                    margin-left: 12px;
+                    margin-left: 3px;
+                    text-align: center;
+
+                    &:hover {
+                        position: absolute;
+                        width: 800px;
+                        height: 600px;
+                        border-radius: 8px;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        z-index: 99;
+                    }
                 }
+
                 .caixaFormacao {
                     grid-area: area2;
                     display: flex;
                     background-color: $brand-primary-200;
                     border-radius: 50%;
-                    width: 100px;
-                    height: 100px;
+                    width: 120px;
+                    height: 120px;
                     justify-content: center;
                     align-items: center;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    text-align: center;
+                    margin-top: 91px;
                 }
                 .caixaCompetencias {
                     grid-area: area3;
                     display: flex;
                     background-color: $brand-primary-200;
                     border-radius: 50%;
-                    width: 100px;
-                    height: 100px;
+                    width: 120px;
+                    height: 120px;
                     justify-content: center;
                     align-items: center;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    margin-top: 21px;
+                    margin-top: 67px;
+                    margin-left: 36px;
+                    text-align: center;
                 }
 
                 .caixaProjetos {
@@ -159,13 +176,14 @@ main {
                     display: flex;
                     background-color: $brand-primary-200;
                     border-radius: 50%;
-                    width: 100px;
-                    height: 100px;
+                    width: 130px;
+                    height: 130px;
                     justify-content: center;
                     align-items: center;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     margin-top: 21px;
-                    margin-left: 34px;
+                    margin-left: 96px;
+                    text-align: center;
                 }
             }
         }

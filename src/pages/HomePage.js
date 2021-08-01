@@ -2,8 +2,14 @@ import classes from './HomePage.module.scss'
 import facebook from '../assets/images/facebook.png'
 import linkedin from '../assets/images/linkedin.png'
 import instagram from '../assets/images/instagram.png'
+import { useState } from 'react'
 export default function HomePage() {
-    console.log(process.env.PUBLIC_URL + 'aquiii')
+    const [experienciaProfissionalText, setExperienciaProfissionalText] = useState('Experiência Profissional')
+
+    const changeExperienciaProfissionalText = () => {
+        setExperienciaProfissionalText('Pariatur sunt pariatur ut nostrud dolor consectetur et id. Aliqua irure consectetur eu velit fugiat ea quis anim. Velit culpa duis quis qui excepteur excepteur nostrud.')
+    }
+
     return (
         <main>
             <section>
@@ -41,9 +47,11 @@ export default function HomePage() {
                     </div>
                     <div className={classes.colunaInformacao}>
 
-                        <div className={classes.experienciaProfissional}>
+                        <div className={classes.experienciaProfissional}
+                            onMouseOver={() => changeExperienciaProfissionalText()}
+                            onMouseLeave={() => setExperienciaProfissionalText('Experiência Profissional')}>
                             <div>
-                                Experiência Profissional
+                                {experienciaProfissionalText}
                             </div>
 
                         </div>
