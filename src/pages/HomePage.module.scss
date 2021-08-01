@@ -24,166 +24,198 @@ main {
 
                     padding-bottom: 5rem;
 
-                    img {
-                        height: 30px;
-                        width: 30px;
-                        color: white;
+                    & > * {
+                        color: #888888;
+                        transition: all ease 0.5s;
                         &:hover {
+                            transition: all ease 0.5s;
+                            color: $brand-accent-900;
                             cursor: pointer;
                         }
                     }
                 }
             }
+        }
 
-            .colunaDeApresentacao {
+        .colunaDeApresentacao {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 200px;
+            .caixaDeApresentacao {
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
+                width: 170px;
+                height: 70px;
+                background-color: $brand-secondary-300;
+                border-radius: 15px;
+                padding: 0.9rem 0.5rem;
+                justify-content: space-between;
                 align-items: center;
-                margin-top: 200px;
-                .caixaDeApresentacao {
-                    display: flex;
-                    width: 170px;
-                    height: 70px;
-                    background-color: $brand-primary-200;
-                    border-radius: 15px;
-                    padding: 0.9rem 0.5rem;
-                    justify-content: space-between;
-                    align-items: center;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    margin-right: 299px;
-                    margin-top: -20px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin-right: 299px;
+                margin-top: -20px;
 
-                    span {
-                        color: rgb(119, 111, 111);
+                span {
+                    color: rgb(119, 111, 111);
 
-                        font-size: 15px;
-                    }
-
-                    p {
-                        color: $brand-accent-900;
-                        font-size: 25px;
-                        margin-bottom: 0;
-                        margin-top: 0;
-                    }
-                    .emojiContainer {
-                        padding-left: 16px;
-                        p {
-                            margin-bottom: 0;
-
-                            font-size: 40px;
-                        }
-                    }
+                    font-size: 15px;
                 }
-                .caixaEstudante {
-                    display: flex;
-                    width: 210px;
-                    height: 60px;
-                    background-color: $brand-primary-200;
-                    border-radius: 15px;
-                    padding: 0.9rem 0.5rem;
-                    justify-content: space-between;
-                    align-items: center;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    margin-top: 49px;
-                    margin-right: 129px;
-                    text-align: center;
 
-                    span {
-                        color: rgb(119, 111, 111);
-
-                        font-size: 13px;
-                    }
+                p {
+                    color: $brand-accent-900;
+                    font-size: 25px;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+                .emojiContainer {
+                    padding-left: 16px;
                     p {
-                        color: $brand-accent-900;
-                        font-size: 15px;
                         margin-bottom: 0;
-                        margin-top: 0;
-                        text-align: left;
+
+                        font-size: 40px;
                     }
                 }
             }
+            .caixaEstudante {
+                display: flex;
+                background-color: $brand-secondary-300;
+                border-radius: 15px;
+                padding: 0.9rem 0.5rem;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin-top: 49px;
+                margin-right: 129px;
+                text-align: center;
 
-            .colunaInformacao {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: repeat(3, 1fr);
-                gap: 0px 0px;
-                grid-auto-flow: row;
-                grid-template-areas:
-                    '. area1 area2'
-                    '. . area3'
-                    '. area4 .';
-                // '. . area4';
-                // '. . area5 . .';
+                span {
+                    color: rgb(119, 111, 111);
 
-                .experienciaProfissional {
-                    grid-area: area1;
-                    display: flex;
-                    background-color: $brand-primary-200;
-                    border-radius: 50%;
-                    width: 130px;
-                    height: 130px;
-                    justify-content: center;
-                    align-items: center;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    margin-top: 28px;
-                    margin-left: 3px;
-                    text-align: center;
-
-                    &:hover {
-                        position: absolute;
-                        width: 800px;
-                        height: 600px;
-                        border-radius: 8px;
-                        top: 0;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        z-index: 99;
-                    }
+                    font-size: 13px;
                 }
-
-                .caixaFormacao {
-                    grid-area: area2;
-                    display: flex;
-                    background-color: $brand-primary-200;
-                    border-radius: 50%;
-                    width: 120px;
-                    height: 120px;
-                    justify-content: center;
-                    align-items: center;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    text-align: center;
-                    margin-top: 91px;
+                p {
+                    color: $brand-accent-900;
+                    font-size: 15px;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                    text-align: left;
                 }
-                .caixaCompetencias {
-                    grid-area: area3;
-                    display: flex;
-                    background-color: $brand-primary-200;
-                    border-radius: 50%;
-                    width: 120px;
-                    height: 120px;
-                    justify-content: center;
-                    align-items: center;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    margin-top: 67px;
-                    margin-left: 36px;
-                    text-align: center;
-                }
+            }
+        }
 
-                .caixaProjetos {
-                    grid-area: area4;
-                    display: flex;
-                    background-color: $brand-primary-200;
-                    border-radius: 50%;
-                    width: 130px;
-                    height: 130px;
-                    justify-content: center;
-                    align-items: center;
-                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    margin-top: 21px;
-                    margin-left: 96px;
-                    text-align: center;
+        .colunaInformacao {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                '. area1 area2'
+                '. . area3'
+                '. area4 .';
+            // '. . area4';
+            // '. . area5 . .';
+
+            .experienciaProfissional {
+                grid-area: area1;
+                display: flex;
+                background-color: $brand-secondary-300;
+                border-radius: 50%;
+                width: 180px;
+                height: 180px;
+                justify-content: center;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin-top: 28px;
+                margin-left: 3px;
+                text-align: center;
+
+                &:hover {
+                    position: absolute;
+                    width: 70%;
+                    height: 800px;
+                    border-radius: 8px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 99;
+                }
+            }
+
+            .caixaFormacao {
+                grid-area: area2;
+                display: flex;
+                background-color: $brand-secondary-300;
+                border-radius: 50%;
+                width: 180px;
+                height: 180px;
+                justify-content: center;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                text-align: center;
+                margin-top: 91px;
+
+                &:hover {
+                    position: absolute;
+                    width: 70%;
+                    height: 800px;
+                    border-radius: 8px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 99;
+                }
+            }
+            .caixaCompetencias {
+                grid-area: area3;
+                display: flex;
+                background-color: $brand-secondary-300;
+                border-radius: 50%;
+                width: 180px;
+                height: 180px;
+                justify-content: center;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin-top: 67px;
+                margin-left: 36px;
+                text-align: center;
+
+                &:hover {
+                    position: absolute;
+                    width: 70%;
+                    height: 800px;
+                    border-radius: 8px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 99;
+                }
+            }
+
+            .caixaProjetos {
+                grid-area: area4;
+                display: flex;
+                background-color: $brand-secondary-300;
+                border-radius: 50%;
+                width: 180px;
+                height: 180px;
+                justify-content: center;
+                align-items: center;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                margin-top: 21px;
+                margin-left: 96px;
+                text-align: center;
+
+                &:hover {
+                    position: absolute;
+                    width: 70%;
+                    height: 800px;
+                    border-radius: 8px;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 99;
                 }
             }
         }
