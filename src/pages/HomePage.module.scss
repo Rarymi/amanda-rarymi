@@ -1,0 +1,173 @@
+@import '../scss/globals/vars';
+main {
+    height: 100vh;
+    padding-top: 66px;
+
+    section {
+        height: 100%;
+
+        .homePageGrid {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 0.2fr 0.8fr 1fr;
+            align-items: stretch;
+
+            .colunaRedesSociais {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                .iconWrapper {
+                    display: inherit;
+                    flex-direction: inherit;
+                    align-items: flex-end;
+
+                    padding-bottom: 5rem;
+
+                    img {
+                        height: 30px;
+                        width: 30px;
+                        color: white;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .colunaDeApresentacao {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 200px;
+                .caixaDeApresentacao {
+                    display: flex;
+                    width: 170px;
+                    height: 70px;
+                    background-color: $brand-primary-200;
+                    border-radius: 15px;
+                    padding: 0.9rem 0.5rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin-right: 299px;
+                    margin-top: -20px;
+
+                    span {
+                        color: rgb(119, 111, 111);
+
+                        font-size: 15px;
+                    }
+
+                    p {
+                        color: $brand-accent-900;
+                        font-size: 25px;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+                    .emojiContainer {
+                        padding-left: 16px;
+                        p {
+                            margin-bottom: 0;
+
+                            font-size: 40px;
+                        }
+                    }
+                }
+                .caixaEstudante {
+                    display: flex;
+                    width: 210px;
+                    height: 60px;
+                    background-color: $brand-primary-200;
+                    border-radius: 15px;
+                    padding: 0.9rem 0.5rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin-top: 49px;
+                    margin-right: 129px;
+                    text-align: center;
+
+                    span {
+                        color: rgb(119, 111, 111);
+
+                        font-size: 13px;
+                    }
+                    p {
+                        color: $brand-accent-900;
+                        font-size: 15px;
+                        margin-bottom: 0;
+                        margin-top: 0;
+                        text-align: left;
+                    }
+                }
+            }
+
+            .colunaInformacao {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                gap: 0px 0px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                    '. . . area1 .'
+                    '. . . . area2'
+                    '. . . . area3'
+                    '. . . area4 .'
+                    '. . area5 . .';
+
+                .experienciaProfissional {
+                    grid-area: area1;
+                    display: flex;
+                    background-color: $brand-primary-200;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin-top: 28px;
+                    margin-left: 12px;
+                }
+                .caixaFormacao {
+                    grid-area: area2;
+                    display: flex;
+                    background-color: $brand-primary-200;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                }
+                .caixaCompetencias {
+                    grid-area: area3;
+                    display: flex;
+                    background-color: $brand-primary-200;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin-top: 21px;
+                }
+
+                .caixaProjetos {
+                    grid-area: area4;
+                    display: flex;
+                    background-color: $brand-primary-200;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    margin-top: 21px;
+                    margin-left: 34px;
+                }
+            }
+        }
+    }
+}

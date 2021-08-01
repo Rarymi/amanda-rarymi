@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Uni Sans' !important;
+    font-weight: 400 !important;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $brand-accent-900;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    background: $brand-primary-300;
+}
+
+html,
+body,
+#app {
+    height: 100%;
+}
